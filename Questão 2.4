@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var (
+		n float64
+	)
+
+	fmt.Println("Digite um valor: ")
+	fmt.Scanln(n)
+
+	if n >= 0 {
+		raiz := math.Sqrt(n)
+		fmt.Println("A raiz quadrada de", n, "é igual a", raiz)
+	} else {
+		quadrado := n * n
+		fmt.Println("O quadrado de", n, "é igual a", quadrado)
+	}
+}
