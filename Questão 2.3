@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	var (
+		n, x, y int64
+	)
+
+	fmt.Println("Digite um valor: ")
+	fmt.Scanln(n)
+
+	fmt.Println("Digite outro valor: ")
+	fmt.Scanln(x)
+
+	y = n + x
+
+	if y > 20 {
+		y = y + 8
+		fmt.Println(y)
+	} else {
+		y = y - 5
+		fmt.Println(y)
+	}
+}
