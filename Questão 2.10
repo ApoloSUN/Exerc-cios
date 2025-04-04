@@ -1,0 +1,57 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var (
+		Destino, Retorno int64
+	)
+
+	fmt.Println("Digite o destino da viagem: ")
+	fmt.Scanln(Destino)
+
+	fmt.Println("A viagem inclui ida e volta?")
+	fmt.Scanln(Retorno)
+
+	switch {
+	case Destino == 1:
+		if Retorno == 1 {
+			fmt.Println("O preço da passagem é R$900.00")
+		} else if Retorno <= 0 || Retorno >= 3 {
+			fmt.Println("Resposta inválida")
+		} else {
+			fmt.Println("O preço da passagem é R$500.00")
+		}
+
+	case Destino == 2:
+		if Retorno == 2 {
+			fmt.Println("O preço da passagem é R$650.00")
+		} else if Retorno <= 0 || Retorno >= 3 {
+			fmt.Println("Resposta inválida")
+		} else {
+			fmt.Println("O preço da passagem é R$350.00")
+		}
+
+	case Destino == 3:
+		if Retorno == 1 {
+			fmt.Println("O preço da passagem é R$600.00")
+		} else if Retorno <= 0 || Retorno >= 3 {
+			fmt.Println("Resposta inválida")
+		} else {
+			fmt.Println("O preço da passagem é R$350.00")
+		}
+
+	case Destino == 4:
+		if Retorno == 1 {
+			fmt.Println("O preço da passagem é R$550.00")
+		} else if Retorno <= 0 || Retorno >= 3 {
+			fmt.Println("Resposta inválida")
+		} else {
+			fmt.Println("O preço da passagem é R$300.00")
+		}
+	case Destino > 4:
+		fmt.Println("Destino inválido")
+	}
+}
