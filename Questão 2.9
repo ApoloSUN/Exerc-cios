@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var (
+		ValorCompra, ValorVenda float64
+	)
+
+	fmt.Println("Digite o valor da compra: ")
+	fmt.Scanln(ValorCompra)
+
+	if ValorCompra <= 0 {
+		fmt.Println("Valor inválido")
+		return
+	}
+
+	switch {
+	case ValorCompra < 10.00:
+		ValorVenda = ValorCompra + (ValorCompra * 0.70)
+	case ValorCompra >= 10.00 && ValorCompra < 30.00:
+		ValorVenda = ValorCompra + (ValorCompra * 0.50)
+	case ValorCompra >= 30.00 && ValorCompra < 50.00:
+		ValorVenda = ValorCompra + (ValorCompra * 0.40)
+	case ValorCompra >= 50.00:
+		ValorVenda = ValorCompra + (ValorCompra * 0.30)
+	}
+
+	fmt.Println("Valor da venda:", ValorVenda)
+
+}
