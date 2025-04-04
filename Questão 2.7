@@ -1,0 +1,51 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var (
+		A, B, C, MENOR, MAIOR, INTER int64
+	)
+
+	fmt.Println("Digite um valor: ")
+	fmt.Scanln(A)
+
+	fmt.Println("Digite outro valor: ")
+	fmt.Scanln(B)
+
+	fmt.Println("Digite outro valor: ")
+	fmt.Scanln(C)
+
+	if A < B && A < C {
+		MENOR = A
+		if B < C {
+			INTER = B
+			MAIOR = C
+		} else {
+			INTER = C
+			MAIOR = B
+		}
+	} else if B < A && B < C {
+		MENOR = B
+		if A < C {
+			INTER = A
+			MAIOR = C
+		} else {
+			INTER = C
+			MAIOR = A
+		}
+	} else {
+		MENOR = C
+		if A < B {
+			INTER = A
+			MAIOR = B
+		} else {
+			INTER = B
+			MAIOR = A
+		}
+	}
+
+	fmt.Println("A ordem crescente de é:", MENOR, "<", INTER, "<", MAIOR)
+}
