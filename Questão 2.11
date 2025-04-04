@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var (
+		X float64
+	)
+
+	fmt.Println("Digite um valor:")
+	fmt.Scanln(&X)
+
+	y := 8 / (2 - X)
+
+	fmt.Println("O valor de f(x) é", y)
+
+}
